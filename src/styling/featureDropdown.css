@@ -1,0 +1,4 @@
+.featureDropdown {
+  display: block;
+  transition: var(--speed);
+}
