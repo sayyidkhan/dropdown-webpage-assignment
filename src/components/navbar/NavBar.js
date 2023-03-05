@@ -1,13 +1,10 @@
 import React from "react";
 import "../../styling/navbar.css";
 import iconarrowdown from "../../images/icon-arrow-down.svg";
-import iconCalendar from "../../images/icon-calendar.svg";
-import iconTodo from "../../images/icon-todo.svg";
-import iconReminders from "../../images/icon-reminders.svg";
-import iconPlanning from "../../images/icon-planning.svg";
 import { useState, useEffect } from "react";
 import FeatureDropdown from "./FeatureDropdown";
 import CompanyDropDown from "./CompanyDropDown";
+import { featuresDropDownIcons, companyDropDownIcons } from "../../resources/data";
 
 const NavBar = () => {
   const [featureList, setFeatureList] = useState(0);
@@ -15,16 +12,12 @@ const NavBar = () => {
 
   const onHoverFeatures = (e) => {};
 
-  useEffect(() => {
-    console.log("featureList hovered! ", featureList);
-  }, [featureList]);
+  useEffect(() => {}, [featureList]);
 
-  useEffect(() => {
-    console.log("companyList hovered! ", companyList);
-  }, [companyList]);
+  useEffect(() => {}, [companyList]);
 
   return (
-    <div className="navbar">
+    <div className="navbar flex w-full">
       <div>
         <span className="pb-2 text-3xl">snap</span>
         <div
@@ -37,10 +30,22 @@ const NavBar = () => {
 
           {featureList ? (
             <span>
-              <FeatureDropdown img={iconTodo} text={"Todo List"} />
-              <FeatureDropdown img={iconCalendar} text={"Calendar"} />
-              <FeatureDropdown img={iconReminders} text={"Reminders"} />
-              <FeatureDropdown img={iconPlanning} text={"Planning"} />
+              <FeatureDropdown
+                icon={featuresDropDownIcons[0].icon}
+                name={featuresDropDownIcons[0].name}
+              />
+              <FeatureDropdown
+                icon={featuresDropDownIcons[1].icon}
+                name={featuresDropDownIcons[1].name}
+              />
+              <FeatureDropdown
+                icon={featuresDropDownIcons[2].icon}
+                name={featuresDropDownIcons[2].name}
+              />
+              <FeatureDropdown
+                icon={featuresDropDownIcons[3].icon}
+                name={featuresDropDownIcons[3].name}
+              />
             </span>
           ) : null}
         </div>
@@ -53,9 +58,9 @@ const NavBar = () => {
           <img src={iconarrowdown} />
           {companyList ? (
             <span>
-              <CompanyDropDown text={"History"} />
-              <CompanyDropDown text={"Our Team"} />
-              <CompanyDropDown text={"Blog"} />
+              <CompanyDropDown text={companyDropDownIcons[0].text} />
+              <CompanyDropDown text={companyDropDownIcons[1].text} />
+              <CompanyDropDown text={companyDropDownIcons[2].text} />
             </span>
           ) : null}
         </div>
