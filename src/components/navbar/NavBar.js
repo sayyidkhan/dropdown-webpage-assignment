@@ -1,10 +1,12 @@
 import React from "react";
-import "../../styling/navbar.css";
 import iconarrowdown from "../../images/icon-arrow-down.svg";
 import { useState, useEffect } from "react";
 import FeatureDropdown from "./FeatureDropdown";
 import CompanyDropDown from "./CompanyDropDown";
-import { featuresDropDownIcons, companyDropDownIcons } from "../../resources/data";
+import {
+  featuresDropDownIcons,
+  companyDropDownIcons,
+} from "../../resources/data";
 
 const NavBar = () => {
   const [featureList, setFeatureList] = useState(0);
@@ -17,19 +19,19 @@ const NavBar = () => {
   useEffect(() => {}, [companyList]);
 
   return (
-    <div className="navbar flex w-full">
-      <div>
-        <span className="pb-2 text-3xl">snap</span>
+    <div className="navbar flex w-full p-2 mx-auto justify-between font-bold h-16">
+      <div className="flex items-center [&>*]:mx-4">
+        <div className="pb-2 text-3xl ">snap</div>
         <div
           onMouseEnter={() => setFeatureList(1)}
           // onMouseLeave={() => setFeatureList(0)}
-          className="dropdown inline-block"
+          className="dropdown inline-block cursor-pointer hover:mt-12"
         >
-          <button>Features</button>
-          <img src={iconarrowdown} />
+          <button className="">Features</button>
+          <img className="inline ml-2" src={iconarrowdown} />
 
           {featureList ? (
-            <span>
+            <div className="border-solid border-gray-700 border-2 rounded-xl ">
               <FeatureDropdown
                 icon={featuresDropDownIcons[0].icon}
                 name={featuresDropDownIcons[0].name}
@@ -38,38 +40,40 @@ const NavBar = () => {
                 icon={featuresDropDownIcons[1].icon}
                 name={featuresDropDownIcons[1].name}
               />
-              <FeatureDropdown
+              {/* <FeatureDropdown
                 icon={featuresDropDownIcons[2].icon}
                 name={featuresDropDownIcons[2].name}
               />
               <FeatureDropdown
                 icon={featuresDropDownIcons[3].icon}
                 name={featuresDropDownIcons[3].name}
-              />
-            </span>
+              /> */}
+            </div>
           ) : null}
         </div>
         <div
-          onClick={() => setCompanyList(1)}
-          // onMouseLeave={() => setCompanyList(0)}
-          className="dropdown"
+          className="dropdown cursor-pointer hover:pt-6"
+          onMouseEnter={() => setCompanyList(1)}
+          onMouseLeave={() => setCompanyList(0)}
         >
-          <button>Company</button>
-          <img src={iconarrowdown} />
+          <button className="">Company</button>
+          <img className="inline ml-2" src={iconarrowdown} />
           {companyList ? (
             <span>
               <CompanyDropDown text={companyDropDownIcons[0].text} />
-              <CompanyDropDown text={companyDropDownIcons[1].text} />
-              <CompanyDropDown text={companyDropDownIcons[2].text} />
+              {/* <CompanyDropDown text={companyDropDownIcons[1].text} /> */}
+              {/* <CompanyDropDown text={companyDropDownIcons[2].text} /> */}
             </span>
           ) : null}
         </div>
-        <span>Careers</span>
+        <div>Careers</div>
         <button>About</button>
       </div>
-      <div>
+      <div className="flex items-center my-auto [&>button]:mx-4 ">
         <button>Login</button>
-        <button className="register">Register</button>
+        <button className="register border-solid border-gray-700 border-2 rounded-xl py-1 px-4">
+          Register
+        </button>
       </div>
     </div>
   );
