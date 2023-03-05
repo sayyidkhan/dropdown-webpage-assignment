@@ -4,7 +4,7 @@ import { clientIcon } from "../../resources/data";
 
 const Section = () => {
   return (
-    <div className=" flex justify-between [&>*]:w-full [&>div]:p-20">
+    <div className=" flex justify-between [&>*]:w-full [&>div]:p-20 lg:[&>div]:p-18 md:[&>div]:p-16 sm:[&>div]:p-12">
       <div className="flex-row content-evenly w-full">
         <div className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl font-bold">
           Make <br /> remote work
