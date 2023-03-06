@@ -42,19 +42,19 @@ const NavBar = () => {
         >
           <button>Features</button>
           <img className="inline ml-2" src={iconarrowdown} />
-        </div>
         {featureList ? (
           <div className="relative h-52">
             <div
-              class="flex-row pt-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black shadow-2xl"
-              type="button"
-            >
+                class="flex-row pt-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black shadow-2xl"
+                type="button"
+              >
               {featuresDropDownIcons.map((v) => (
                 <FeatureDropdown icon={v.icon} name={v.name} />
               ))}
             </div>
           </div>
         ) : null}
+        </div>
         <div
           className="h-50 relative webview dropdown cursor-pointer hover:pt-12 "
           onMouseEnter={() => setCompanyList(1)}
