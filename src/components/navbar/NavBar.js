@@ -43,35 +43,31 @@ const NavBar = () => {
           <button>Features</button>
           <img className="inline ml-2" src={iconarrowdown} />
           {featureList ? (
-            <div className="relative h-52">
-              <div
-                class="flex-row left-0 p-24 px-8 mt-6 -mr-20 text-xs leading-8 text-black drop-shadow-2xl"
-                type="button"
-              >
-                {featuresDropDownIcons.map((v) => (
-                  <FeatureDropdown icon={v.icon} name={v.name} />
-                ))}
-              </div>
+            <div
+              class="absolute left-0 p-2 px-32 m-2 text-xs leading-8 text-black drop-shadow-2xl"
+              type="button"
+            >
+              {featuresDropDownIcons.map((v) => (
+                <FeatureDropdown icon={v.icon} name={v.name} />
+              ))}
             </div>
           ) : null}
         </div>
         <div
-          className="h-50 relative webview dropdown cursor-pointer hover:pt-12 "
+          className="webview dropdown inline-block cursor-pointer"
           onMouseEnter={() => setCompanyList(1)}
           onMouseLeave={() => setCompanyList(0)}
         >
           <button>Company</button>
           <img className="inline ml-2" src={iconarrowdown} />
           {companyList ? (
-            <div className="relative h-52">
-              <div
-                class="flex-row p-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black drop-shadow-2xl"
-                type="button"
-              >
-                {companyDropDownIcons.map((v) => (
-                  <CompanyDropDown text={v.text} />
-                ))}
-              </div>
+            <div
+              class="absolute left-24 m-2 p-2 px-32 text-xs leading-8 text-black drop-shadow-2xl"
+              type="button"
+            >
+              {companyDropDownIcons.map((v) => (
+                <CompanyDropDown text={v.text} />
+              ))}
             </div>
           ) : null}
         </div>
