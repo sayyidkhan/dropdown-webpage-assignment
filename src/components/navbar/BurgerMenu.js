@@ -5,7 +5,7 @@ const DropDownSample = ({ burgerMenuBar }) => {
   return (
     <div class="relative h-40">
       <div
-        class="flex-row pt-6 px-6 mt-12 -mr-10 text-xs uppercase leading-8 text-black shadow-2xl"
+        class="flex-row pt-6 px-6 mt-12 -mr-10 text-xs uppercase leading-8 text-black drop-shadow-2xl"
         type="button"
       >
         <button onClick={burgerMenuBar}>

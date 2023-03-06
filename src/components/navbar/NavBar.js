@@ -42,18 +42,18 @@ const NavBar = () => {
         >
           <button>Features</button>
           <img className="inline ml-2" src={iconarrowdown} />
-        {featureList ? (
-          <div className="relative h-52">
-            <div
-                class="flex-row p-24 px-8 mt-6 -mr-20 text-xs leading-8 text-black drop-shadow-2xl"
+          {featureList ? (
+            <div className="relative h-52">
+              <div
+                class="flex-row left-0 p-24 px-8 mt-6 -mr-20 text-xs leading-8 text-black drop-shadow-2xl"
                 type="button"
               >
-              {featuresDropDownIcons.map((v) => (
-                <FeatureDropdown icon={v.icon} name={v.name} />
-              ))}
+                {featuresDropDownIcons.map((v) => (
+                  <FeatureDropdown icon={v.icon} name={v.name} />
+                ))}
+              </div>
             </div>
-          </div>
-        ) : null}
+          ) : null}
         </div>
         <div
           className="h-50 relative webview dropdown cursor-pointer hover:pt-12 "
@@ -65,7 +65,7 @@ const NavBar = () => {
           {companyList ? (
             <div className="relative h-52">
               <div
-                class="flex-row  p-24 px-8 mt-6  -mr-24 text-xs leading-8 text-black drop-shadow-2xl"
+                class="flex-row p-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black drop-shadow-2xl"
                 type="button"
               >
                 {companyDropDownIcons.map((v) => (
