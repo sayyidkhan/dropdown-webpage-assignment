@@ -9,7 +9,7 @@ import {
   companyDropDownIcons,
 } from "../../resources/data";
 import DropDownSample from "./BurgerMenu";
-import FeatureSample from "./CompanyDropDown";
+import CompanyDropDown from "./CompanyDropDown";
 
 const NavBar = () => {
   const [featureList, setFeatureList] = useState(false);
@@ -43,6 +43,18 @@ const NavBar = () => {
           <button>Features</button>
           <img className="inline ml-2" src={iconarrowdown} />
         </div>
+        {featureList ? (
+          <div className="relative h-52">
+            <div
+              class="flex-row pt-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black shadow-2xl"
+              type="button"
+            >
+              {featuresDropDownIcons.map((v) => (
+                <FeatureDropdown icon={v.icon} name={v.name} />
+              ))}
+            </div>
+          </div>
+        ) : null}
         <div
           className="h-50 relative webview dropdown cursor-pointer hover:pt-12 "
           onMouseEnter={() => setCompanyList(1)}
@@ -57,7 +69,7 @@ const NavBar = () => {
                 type="button"
               >
                 {companyDropDownIcons.map((v) => (
-                  <FeatureSample text={v.text} />
+                  <CompanyDropDown text={v.text} />
                 ))}
               </div>
             </div>
@@ -83,28 +95,6 @@ const NavBar = () => {
           </button>
         </div>
         {burgerMenu && <DropDownSample burgerMenuBar={burgerMenuBar} />}
-        {featureList ? (
-          <div className="shadow-2xl h-54 mt-48 relative border-solid border-gray-700 border-2 rounded-xl">
-            <div className="flex-row p-2 mr-1 leading-normal">
-              <FeatureDropdown
-                icon={featuresDropDownIcons[0].icon}
-                name={featuresDropDownIcons[0].name}
-              />
-              <FeatureDropdown
-                icon={featuresDropDownIcons[1].icon}
-                name={featuresDropDownIcons[1].name}
-              />
-              <FeatureDropdown
-                icon={featuresDropDownIcons[2].icon}
-                name={featuresDropDownIcons[2].name}
-              />
-              <FeatureDropdown
-                icon={featuresDropDownIcons[3].icon}
-                name={featuresDropDownIcons[3].name}
-              />
-            </div>
-          </div>
-        ) : null}
       </div>
     </div>
   );
