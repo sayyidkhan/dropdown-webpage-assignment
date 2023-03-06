@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-const CompanyDropDown = (props) => {
+const FeatureSample = ({ text }) => {
   return (
-    <div className="[&>*]:inline mx-2">
-      <a > {props.text} </a>
-    </div>
-  )
-}
+    <>
+      <div>{text}</div>
+    </>
+  );
+};
 
-export default CompanyDropDown
+export default FeatureSample;

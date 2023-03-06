@@ -1,14 +1,32 @@
 import React from "react";
+import iconclosemenu from "../../images/icon-close-menu.svg";
 
-const BurgerMenu = () => {
+const DropDownSample = ({ burgerMenuBar }) => {
   return (
-    <span className=" relative bg-blend-overlay border-gray-700 border-2 rounded-xl text-center flex-row">
-      <div>BurgerMenu</div>
-      <div>BurgerMenu</div>
-      <div>BurgerMenu</div>
-      <div>BurgerMenu</div>
-    </span>
+    <div class="relative h-40">
+      <div
+        class="flex-row pt-6 px-6 mt-12 -mr-10 text-xs uppercase leading-8 text-black shadow-2xl"
+        type="button"
+      >
+        <button onClick={burgerMenuBar}>
+          <img src={iconclosemenu} />
+        </button>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+        <div>Dropdown button</div>
+      </div>
+    </div>
   );
 };
 
-export default BurgerMenu;
+export default DropDownSample;

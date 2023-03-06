@@ -1,7 +1,6 @@
 import React from "react";
 import imageherodesktop from "../../images/image-hero-desktop.png";
 import { clientIcon } from "../../resources/data";
-import BurgerMenu from "../navbar/BurgerMenu";
 
 const Section = () => {
   return (
