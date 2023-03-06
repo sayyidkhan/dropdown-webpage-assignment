@@ -37,7 +37,7 @@ const NavBar = () => {
         <div className="pb-2 text-4xl">snap</div>
         <div
           onMouseEnter={() => setFeatureList(1)}
-          onMouseLeave={() => setFeatureList(0)}
+          // onMouseLeave={() => setFeatureList(0)}
           className="webview dropdown inline-block cursor-pointer"
         >
           <button>Features</button>
@@ -45,7 +45,7 @@ const NavBar = () => {
         {featureList ? (
           <div className="relative h-52">
             <div
-                class="flex-row pt-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black shadow-2xl"
+                class="flex-row p-24 px-8 mt-6 -mr-20 text-xs leading-8 text-black drop-shadow-2xl"
                 type="button"
               >
               {featuresDropDownIcons.map((v) => (
@@ -65,7 +65,7 @@ const NavBar = () => {
           {companyList ? (
             <div className="relative h-52">
               <div
-                class="flex-row pt-24 px-8 mt-6 -mr-24 text-xs leading-8 text-black shadow-2xl"
+                class="flex-row  p-24 px-8 mt-6  -mr-24 text-xs leading-8 text-black drop-shadow-2xl"
                 type="button"
               >
                 {companyDropDownIcons.map((v) => (
