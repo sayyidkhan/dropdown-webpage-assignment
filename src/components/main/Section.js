@@ -4,20 +4,20 @@ import { clientIcon } from "../../resources/data";
 
 const Section = () => {
   return (
-    <div className=" flex justify-between [&>*]:w-full [&>div]:p-20 lg:[&>div]:p-18 md:[&>div]:p-16 sm:[&>div]:p-12">
-      <div className="flex-row content-evenly w-full">
-        <div className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl font-bold">
-          Make <br /> remote work
+    <div className="flex flex-wrap flex-col-reverse sm:flex-row sm:flex-nowrap justify-between [&>*]:w-full [&>div]:p-8 lg:[&>div]:p-18 md:[&>div]:p-16 sm:[&>div]:p-12 px-1 ">
+      <div className="w-full sm:text-left text-center">
+        <div className="xl:text-7xl lg:text-6xl md:text-5xl text-3xl font-bold ">
+          Make remote work
         </div>
-        <br /> <br />
+        <br />
         <h2>
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar
         </h2>
-        <button className="mx-0 px-4 py-3 bg-black text-white box-border border-2 border-gray-500 rounded-xl min-w-max my-10 ">
+        <button className="mx-0 px-4 py-2 bg-black text-white box-border border-2 border-gray-500 rounded-xl min-w-max my-10 ">
           Learn more
         </button>
-        <h2 className="flex">
+        <h2 className="flex [&>*]:w-1/4 items-center mx-auto">
           <img src={clientIcon[0].icon} />
           <img src={clientIcon[1].icon} />
           <img src={clientIcon[2].icon} />

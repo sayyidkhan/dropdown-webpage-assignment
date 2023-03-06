@@ -20,7 +20,7 @@ const NavBar = () => {
   useEffect(() => {}, [companyList]);
 
   return (
-    <div className="navbar flex w-full md:p-2 p-4 mx-auto justify-between font-bold h-16">
+    <div className="navbar flex w-full md:p-2 p-8 mx-auto justify-between font-bold h-16">
       <div className="flex items-center [&>*]:mx-2 md:[&>*]:mx-4 sm:text-base text-sm [&>.webview]:hidden sm:[&>.webview]:inline">
         <div className="pb-2 text-3xl">snap</div>
         <div
