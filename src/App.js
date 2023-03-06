@@ -4,7 +4,7 @@ import NavBar from "./components/navbar/NavBar";
 
 function App() {
   return (
-    <div className="w-full ">
+    <div className="w-full opacity-100 bg-stone-100">
       <NavBar />
       <Section />
     </div>

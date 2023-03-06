@@ -34,7 +34,9 @@ const NavBar = () => {
   return (
     <div className="navbar flex w-full md:p-2 p-8 mx-auto justify-between font-bold h-16">
       <div className="flex items-center [&>*]:mx-2 md:[&>*]:mx-4 text-sm md:text-base [&>.webview]:hidden sm:[&>.webview]:inline">
-        <div className="pb-2 text-4xl">snap</div>
+        <div>
+          <div className="pb-2 text-4xl">snap</div>
+        </div>
         <div
           onMouseEnter={() => setFeatureList(1)}
           // onMouseLeave={() => setFeatureList(0)}
@@ -56,13 +58,13 @@ const NavBar = () => {
         <div
           className="webview dropdown inline-block cursor-pointer"
           onMouseEnter={() => setCompanyList(1)}
-          onMouseLeave={() => setCompanyList(0)}
+          // onMouseLeave={() => setCompanyList(0)}
         >
           <button>Company</button>
           <img className="inline ml-2" src={iconarrowdown} />
           {companyList ? (
             <div
-              class="absolute left-24 m-2 p-2 px-32 text-xs leading-8 text-black drop-shadow-2xl"
+              class="absolute left-32 m-2 p-2 px-24 md:px-32 text-xs leading-8 text-black drop-shadow-2xl"
               type="button"
             >
               {companyDropDownIcons.map((v) => (

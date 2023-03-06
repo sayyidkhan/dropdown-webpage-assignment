@@ -26,7 +26,7 @@ const Section = () => {
         </h2>
       </div>
       <div className="w-full p-2" >
-        <img src={imageherodesktop} />
+        <img className="object-scale-down" src={imageherodesktop} />
       </div>
     </div>
   );
